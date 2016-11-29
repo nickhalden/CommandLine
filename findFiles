@@ -1,3 +1,6 @@
 # all the files that are older than 15 days ; removing them
 find /var/dtpdev/tmp/ -type f -mtime +15 -exec rm -f {} +
 
+# all the xml files that have that are nodejs based (jenkins config)
+find . -name \*.xml | while read i; do grep --color '<command>npm' "$i" ; [ $? == 0 ] && echo $i; done
+
