@@ -1,0 +1,3 @@
+# all the files that are older than 15 days ; removing them
+find /var/dtpdev/tmp/ -type f -mtime +15 -exec rm -f {} +
+
