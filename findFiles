@@ -4,3 +4,4 @@ find /var/dtpdev/tmp/ -type f -mtime +15 -exec rm -f {} +
 # all the xml files that have that are nodejs based (jenkins config)
 find . -name \*.xml | while read i; do grep --color '<command>npm' "$i" ; [ $? == 0 ] && echo $i; done
 
+curl -X GET http://username:password@example.com/path/to/xml -o output.xml -H "Content-Type: text/xml"
